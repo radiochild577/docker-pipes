@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  pipes:
+    build:
+      context: .
+    image: pipes:master
+    command: bundle exec puma -e development
+    ports:
+      - "127.0.0.1:9292:9292"
